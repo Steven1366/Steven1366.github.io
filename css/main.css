@@ -1833,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #603d82;
+  background: #f9184b;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2838,7 +2838,7 @@ pre .javascript .function {
   background-color: #bbb;
 }
 .btn-bar {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.6);
 }
 .site-nav-toggle {
   left: 20px;
@@ -2868,7 +2868,7 @@ pre .javascript .function {
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background-color: glass;
+  background-color: rgba(255,255,255,0.6);
   box-shadow: initial;
   border-radius: initial;
   opacity: 0;
