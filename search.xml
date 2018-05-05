@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[【杂谈+教程】个人对新版直传压制时的一些建议（二、参数和各种玄学）]]></title>
+    <url>%2F2018%2F05%2F05%2F%E3%80%90%E6%9D%82%E8%B0%88-%E6%95%99%E7%A8%8B%E3%80%91%E4%B8%AA%E4%BA%BA%E5%AF%B9%E6%96%B0%E7%89%88%E7%9B%B4%E4%BC%A0%E5%8E%8B%E5%88%B6%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BB%BA%E8%AE%AE%EF%BC%88%E4%BA%8C%E3%80%81%E5%8F%82%E6%95%B0%E5%92%8C%E5%90%84%E7%A7%8D%E7%8E%84%E5%AD%A6%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[上一篇杂谈出来已经是一个多月前的事情了，中间又是学业原因，又是20期视频最后的填坑工作，这个系列就托更了一段时间 总之，上一篇里提及了大概压制时改用啥分辨率，为啥不推荐720p这些原因，还有一些简单的参数设置，这一期我会给出设置其他参数时一些个人建议（不一定都是最好的，个人主观感受较多） B帧、P帧、I帧 首先说下一个视频文件内只含有三种帧：B帧、P帧和I帧 --I帧最大，几乎就是一个帧变成jpeg格式的大小，但他的数量也是最少的 --P帧较I帧要小很多，不包含完整的视频画面，需要借助之前的I帧来进行预测（前向预测），还原画面，数量要比I帧多但是比B帧少很多 --B帧比I帧还要小一点，同样不是完整的画面，和P帧不同的是他是双向预测的，而且可以读取临近的B帧，P帧，I帧来还原画面 为啥只能设置B帧和I帧？ 设置最大连续B帧、最大、最小I帧间隔和场景感知就是间接的设定了P帧的数量和间隔 比如，我的参数是-I 12 -i 5 -b 3，这时候视频理想状态下，1个GOP（两个I帧之间的全部帧，外加第一个I帧-图里已经标红）里个各个帧大概是这样排列的 I BBB P BBB P BBB I 细心观察的读者应该发现了，这不是总共11个帧吗，怎么没用满12个？ 实际上，除非是类似一图流这样的静态画面，设定的最大I帧间隔很难用满，而且多数时候，场景感知（scenecut）就放着了不少I帧了（有别于-I -i设定的I帧，无法被用做一个gop的开头，相关机制下文会有）这也就引出我的第三段，为什么B帧不是设置的越高越好 B帧，参考帧数（ref）为什么不能一路开到16（最大值） 和上一段同理，画面动态多等种种因素，编码器实际放着的连续B帧数量很难达到你所设定的最大值这一现象在-b这个值较大的时候体现的尤为明显，B帧总数没有随着你的设定等比增长，这样带来的就是下降码率的幅度越来越小，但是编码速度越来越慢，如下图 ref（参考帧数）字面意思，允许B帧最多参考多少相领的帧，多数时候只会用到2-4以内 总之，B帧、ref这两个数值一般设定为6-8足矣，太高会严重拖慢编码速度而且实际效果没啥提升 场景感知（scenecut） 顾名思义，这个参数就是设定编码器根据两帧之间的相似度来额外放置I帧的权重，最大100，数值太大（60以上）放置的I帧会太多，浪费码率；数值太小（35以下），容易解码出错，这个数值在压制时完全可以不填写，编码器会默认设置为40，已经是一个很好的设定了 aq-mode 和aq-strength（玄学） 这两个参数与psy-rd都是h264编码最核心的地带，也是最难搞的几个设定，如果你不想像VCB那样压视频，aq-strength设定为0.8-0.9足矣 aq-mode直接设定为2，这个参数真的要找到最好的设定需要大量的实验，VBCstudio是有他们的公开教程，其中就包括了编码器参数研发思路，这里就不做多讲 psy-rd(心理学优化，玄学) 和上栏同理，有两个设定值，编码器默认1:0，这里只给几个个人推荐的数值 动画：0.3:0 或0.6:0 3D游戏：0.8:0.05 电影，拍摄：1:0 其他场景都建议直接不填写此数值或者填写0:0（格式–psy-rd 0:0） 动态向量预测相关 这里涉及两个参数–me（运动搜索算法） –merange（运动搜索范围） –me 这里个人只推荐填写umh，其他值不做推荐，umh本身速度不慢，质量好，搜索范围支持16以上，还有最好的tesa但这个速度很慢，不是8代i7这样的cpu不做推荐 –merange 推荐16-40之间，太大没啥意义（原因同B帧）个人目前使用的是32 最后的设定推荐是–me umh –merange 32 其他参数 --subme 子像素优化，最高11，推荐8-10 --rc-lookahead 推荐填写为视频帧数的3倍 --direct auto --partitions all --no-fast-pskip 这三个参数不赶时间可以考虑加上，没啥副作用，值得考虑 最后是个人目前第19期rksp实况的压制参数，供大家参考（aqmode -r -b的设定不要学） --crf 17 --level 51 --preset 8 -r 11 -b 11 -i 120 -I 590 --scenecut 60 -f -1:-1 --qcomp 0.5 --psy-rd 0.8:0.05 --aq-mode 3 --aq-strength 0.9 --b-adapt 2 --me umh --merange 34 --subme 10 --rc-lookahead 240 --direct auto --partitions all --no-fast-pskip 压制效果见此 https://www.bilibili.com/video/av21781440]]></content>
+      <categories>
+        <category>视频压制</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[曾经的启德机场]]></title>
+    <url>%2F2018%2F05%2F05%2F%E6%9B%BE%E7%BB%8F%E7%9A%84%E5%90%AF%E5%BE%B7%E6%9C%BA%E5%9C%BA%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>放图</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[放些P站上的图]]></title>
+    <url>%2F2018%2F05%2F02%2F%E6%94%BE%E4%BA%9BP%E7%AB%99%E4%B8%8A%E7%9A%84%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>放图</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[博客装修的差不多了]]></title>
+    <url>%2F2018%2F05%2F02%2F%E5%8D%9A%E5%AE%A2%E8%A3%85%E4%BF%AE%E7%9A%84%E5%B7%AE%E4%B8%8D%E5%A4%9A%E4%BA%86%2F</url>
+    <content type="text"><![CDATA[各种配置来配置去，这博客算是做的差不多了，搞了3天啊]]></content>
+      <tags>
+        <tag>-开站纪念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[categories]]></title>
+    <url>%2F2018%2F05%2F02%2Fcategories%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[tags]]></title>
+    <url>%2F2018%2F05%2F02%2Ftags%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F02%2Fcate%2F</url>
+    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[图片测试]]></title>
+    <url>%2F2018%2F05%2F01%2F%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[图片测试图片测试]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>-开站纪念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[文章题目第二号博文-测试用 hexo new 文章题目第二号博文-测试用]]></title>
+    <url>%2F2018%2F05%2F01%2F%E6%96%87%E7%AB%A0%E9%A2%98%E7%9B%AE%E7%AC%AC%E4%BA%8C%E5%8F%B7%E5%8D%9A%E6%96%87-%E6%B5%8B%E8%AF%95%E7%94%A8hexo-new-%E6%96%87%E7%AB%A0%E9%A2%98%E7%9B%AE%E7%AC%AC%E4%BA%8C%E5%8F%B7%E5%8D%9A%E6%96%87-%E6%B5%8B%E8%AF%95%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[博客正式建站+开放访问 2018-5-1感谢 @つ亲吻天边的那朵白云 提供的协助，他的博客https://xyl201314.github.io/]]></content>
+      <tags>
+        <tag>-开站纪念</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F04%2F30%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
