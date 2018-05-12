@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
-    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
+    <title><![CDATA[关于近期B站转码机制]]></title>
+    <url>%2F2018%2F05%2F13%2F%E5%85%B3%E4%BA%8E%E8%BF%91%E6%9C%9FB%E7%AB%99%E8%BD%AC%E7%A0%81%E6%9C%BA%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[近期B站在视频转码上可以说是大刀阔斧的改造啊，先是6M高码开放，再是开始筹备网页播放HEVC，又是B站近期在部分分区上线的crf二压（阿里把他称作窄带高清） 这里就讲下B站最近上线的几个新机制 1、crf二压，以1080+为例，该视频的1080p档位则会优先使用crf23转码，如果crf23输出码率高于3000k，则使用ABR重新进行压制 这样做的好处就是节约服务器资源，提高载入速度，而且画面质量不缩水，坏处就是，有些键盘侠会借机带哪些不了解视频压制的人的节奏，搞得像是商业欺诈一样的 2、分辨率强行锁死1080p 这就表示服务器已经将分辨率视为二压线的一部分，超过的都会压缩这就代表已经无法投稿1440p 2160p 甚至4320p的视频，这样做的一个好处就是照顾到较老/低端型号的手机，就像以前限制编码级别4.1一样具体是谁建议z大这么做的，我不会透露的 3、二压编码已经将ref提升到6 提升同码率下的质量或同crf下降低码率不解释 P站ID:66174768]]></content>
+      <categories>
+        <category>视频压制</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
@@ -11,12 +14,9 @@
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
   <entry>
-    <title><![CDATA[关于近期B站转码机制]]></title>
-    <url>%2F2018%2F05%2F09%2F%E5%85%B3%E4%BA%8E%E8%BF%91%E6%9C%9FB%E7%AB%99%E8%BD%AC%E7%A0%81%E6%9C%BA%E5%88%B6%2F</url>
-    <content type="text"><![CDATA[近期B站在视频转码上可以说是大刀阔斧的改造啊，先是6M高码开放，再是开始筹备网页播放HEVC，又是B站近期在部分分区上线的crf二压（阿里把他称作窄带高清） 这里就讲下B站最近上线的几个新机制 1、crf二压，以1080+为例，该视频的1080p档位则会优先使用crf23转码，如果crf23输出码率高于3000k，则使用ABR重新进行压制 这样做的好处就是节约服务器资源，提高载入速度，而且画面质量不缩水，坏处就是，有些键盘侠会借机带哪些不了解视频压制的人的节奏，搞得像是商业欺诈一样的 2、分辨率强行锁死1080p 这就表示服务器已经将分辨率视为二压线的一部分，超过的都会压缩这就代表已经无法投稿1440p 2160p 甚至4320p的视频，这样做的一个好处就是照顾到较老/低端型号的手机，就像以前限制编码级别4.1一样具体是谁建议z大这么做的，我不会透露的 3、二压编码已经将ref提升到6 提升同码率下的质量或同crf下降低码率不解释 P站ID:66174768]]></content>
-      <categories>
-        <category>视频压制</category>
-      </categories>
+    <title></title>
+    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
+    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
   </entry>
   <entry>
     <title><![CDATA[【装机+跑分】市场上为数不多的MLC固态-东芝Q200ex]]></title>
