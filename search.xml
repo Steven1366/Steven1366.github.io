@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
+    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F05%2F12%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[关于近期B站转码机制]]></title>
+    <url>%2F2018%2F05%2F09%2F%E5%85%B3%E4%BA%8E%E8%BF%91%E6%9C%9FB%E7%AB%99%E8%BD%AC%E7%A0%81%E6%9C%BA%E5%88%B6%2F</url>
+    <content type="text"><![CDATA[近期B站在视频转码上可以说是大刀阔斧的改造啊，先是6M高码开放，再是开始筹备网页播放HEVC，又是B站近期在部分分区上线的crf二压（阿里把他称作窄带高清） 这里就讲下B站最近上线的几个新机制 1、crf二压，以1080+为例，该视频的1080p档位则会优先使用crf23转码，如果crf23输出码率高于3000k，则使用ABR重新进行压制 这样做的好处就是节约服务器资源，提高载入速度，而且画面质量不缩水，坏处就是，有些键盘侠会借机带哪些不了解视频压制的人的节奏，搞得像是商业欺诈一样的 2、分辨率强行锁死1080p 这就表示服务器已经将分辨率视为二压线的一部分，超过的都会压缩这就代表已经无法投稿1440p 2160p 甚至4320p的视频，这样做的一个好处就是照顾到较老/低端型号的手机，就像以前限制编码级别4.1一样具体是谁建议z大这么做的，我不会透露的 3、二压编码已经将ref提升到6 提升同码率下的质量或同crf下降低码率不解释 P站ID:66174768]]></content>
+      <categories>
+        <category>视频压制</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[【装机+跑分】市场上为数不多的MLC固态-东芝Q200ex]]></title>
     <url>%2F2018%2F05%2F07%2F%E3%80%90%E8%A3%85%E6%9C%BA-%E8%B7%91%E5%88%86%E3%80%91%E5%B8%82%E5%9C%BA%E4%B8%8A%E4%B8%BA%E6%95%B0%E4%B8%8D%E5%A4%9A%E7%9A%84MLC%E5%9B%BA%E6%80%81-%E4%B8%9C%E8%8A%9DQ200ex%2F</url>
     <content type="text"><![CDATA[其实个人能够用上这个固态也是托了之前系统一闲着就死机的福了，更改电源设置也不见效，怀疑硬盘存在坏道，干脆就入手了这块ssd，以前就听闻它MLC颗粒，几乎没有出现掉盘、变砖的情况，于是狗东常规价580入手（然而买完第二天就掉500了） 买来第二天就到货了，下图为买来当日的开箱照，分别是保修条款、安装说明书，垫片和硬盘本体，还有个泡沫塑料缓冲 开箱安装中途为了备考，所以一直没装系统，放在抽屉里吃灰，直到5月7号才给装上,不得不说先马米立方虽然做工不咋样，白色还容易被晒发黄，但这机箱都真的很棒，主板平置可以让机箱变得方方正正的，放在桌子上也不用担心不小心碰到，翻倒然后机械盘gg 安装过程很舒服，把垫片和硬盘都塞进去就完事了，接上SATA线、电源线，把托架放回去，拧上免工具螺丝就可以进PE装系统了 最后来几张机箱侧照 硬盘格式化、安装系统和自己第一次装机不同，这次我使用的是目前市面上唯一的纯净PE系统–微PE，想用的可以去下方的链接里（微PE现在出了一些克隆的李鬼网站，一定要小心）http://www.wepe.com.cn/download.html 下一步就是去msdn把win10的iso安装包搞下来，原本手里是有从msdn下的安装包，但检查哈希值后发现文件有问题，无奈只能拿迅雷7重下，资源链接速度倒是不错，全程都能稳定5.0-4.2MB，一刻钟左右就下好了，再次检查哈希值没有任何问题，于是安心的复制进了优盘 顺路复制进优盘的还有各种常用软件的安装包，chrome浏览器，火绒，Adobe全家桶啥的全部扔进去,也就装了这些，附带一个crystalssd用于只后的测试 把优盘插上，按下开机键，然后按Delete键进bios，启动盘设置-选择优盘然后就等加载就完事了，反正PE系统都这个样子，基本上就是几个做系统的软件，不会常用 Diskgeneious格式化硬盘，不得不说这一步和贴吧上的完全不一样，费了好大劲才把硬盘处理成GPT分区表，然后是做上4K对齐，提高SSD的性能，同时小幅度延长这块SSD的使用寿命 导入iso文件，镜像就选win10专业版的，家庭版啥的都不咋样，这一步很简单，检查下有没有选错东西就行 关机，拔出优盘，再开机设置第一启动盘为固态硬盘，然后直接进去系统自行开始安装 到这里很有意思的一点就是原本应该出现的win10的logo到这里就成了华硕的logo了，正式开机也是这样 最后放几张跑分图Crystal SSD 1GB、8GB读写 HD tune基准测试 AS SSD测试]]></content>
@@ -51,11 +69,6 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F02%2Fcate%2F</url>
-    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[图片测试]]></title>
     <url>%2F2018%2F05%2F01%2F%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[图片测试图片测试]]></content>
@@ -73,10 +86,5 @@
       <tags>
         <tag>-开站纪念</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F04%2F30%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
