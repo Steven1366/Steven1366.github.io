@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[哔哩哔哩2018版直传视频规格表 v1.0]]></title>
+    <url>%2F2018%2F05%2F17%2F%E5%93%94%E5%93%A9%E5%93%94%E5%93%A92018%E7%89%88%E7%9B%B4%E4%BC%A0%E8%A7%86%E9%A2%91%E8%A7%84%E6%A0%BC%E8%A1%A8-v1-0%2F</url>
+    <content type="text"><![CDATA[关于近期B站直传系统的变动，H265编码已经实装，1440p已经无法投稿，降路开始采用CRF进行压制]]></content>
+      <categories>
+        <category>视频压制</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[hexo成功转移]]></title>
     <url>%2F2018%2F05%2F12%2Fhexo%E6%88%90%E5%8A%9F%E8%BD%AC%E7%A7%BB%2F</url>
     <content type="text"><![CDATA[这篇文章是在个人台式机的新系统上所编辑的]]></content>
