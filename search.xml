@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[最近的各种乱七八糟的事]]></title>
+    <title><![CDATA[最近的烦心事]]></title>
     <url>%2F2018%2F08%2F18%2F%E6%9C%80%E8%BF%91%E7%9A%84%E7%83%A6%E5%BF%83%E4%BA%8B%2F</url>
     <content type="text"><![CDATA[整个暑假基本都是各种补课班，TOEFL搞完就是SAT，TOEFL倒好，分数成功触及95分，SAT阅读是根本学不动，语法倒是可以 整个暑假对我来说到目前也只是放了11天而已，4天期末考完，7天托福考完学SAT之前，这几天算是拼了老命才把21期去冥王星的做出来，不过视频反响很好，而且还被B站的算法推广了开来，也没几天就900播放，破了20期的记录了 设备倒是做了个升级，960换1070ti，据说显卡后面还要涨价，3400入手的显卡算是值了吧，可惜CPU要涨价了，还好AMD那边就是个2700x，2700还跌了100 21号去夏威夷考试，度假不存在的，考团管得会比较严 HEXO上的文章才发现自己还有好几个坑没写，看情况慢慢填坑吧，这段时间版主工作也只是处理了百科全书处理不了的东西 感觉自己做RKSP系列也差不多要退役了，今年B站兴起了好几个做RO的，个个技术比我厉害一大截 或许我能这样年少轻狂的日子也就这么两年了吧]]></content>
   </entry>
@@ -32,14 +32,14 @@
     <content type="text"><![CDATA[这篇文章是在个人台式机的新系统上所编辑的]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
-    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F05%2F12%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
+    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
   </entry>
   <entry>
     <title><![CDATA[关于近期B站转码机制]]></title>
