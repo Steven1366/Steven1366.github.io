@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ASSSDBenchmark
+  XmlFormatVersion="1">
+  <Information>
+    <Name>SanDisk SD8SN8U-128G-1006</Name>
+    <Firmware>X4120006</Firmware>
+    <Controller>iaStorA</Controller>
+    <Size>119.24 GB</Size>
+    <DateTime>2018/6/22 20:25:44</DateTime>
+    <BenchmarkVersion>1.6.4237.30508</BenchmarkVersion>
+    <Mode>MB/s</Mode>
+    <Note />
+    <Signature />
+  </Information>
+  <SeqTest>
+    <Read>455.09 MB/s</Read>
+    <Write>299.26 MB/s</Write>
+  </SeqTest>
+  <Random4K1TTest>
+    <Read>21.86 MB/s</Read>
+    <Write>51.95 MB/s</Write>
+  </Random4K1TTest>
+  <Random4K64TTest>
+    <Read>329.91 MB/s</Read>
+    <Write>75.67 MB/s</Write>
+  </Random4K64TTest>
+  <AccTimeTest>
+    <Read>0.166 ms</Read>
+    <Write>0.097 ms</Write>
+  </AccTimeTest>
+  <Score>
+    <Read>397</Read>
+    <Write>158</Write>
+    <Total>757</Total>
+  </Score>
+</ASSSDBenchmark>

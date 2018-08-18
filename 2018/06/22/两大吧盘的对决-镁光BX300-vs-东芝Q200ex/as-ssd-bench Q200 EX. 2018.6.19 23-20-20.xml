@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ASSSDBenchmark
+  XmlFormatVersion="1">
+  <Information>
+    <Name>Q200 EX.</Name>
+    <Firmware>JYRA0102</Firmware>
+    <Controller>storahci</Controller>
+    <Size>223.57 GB</Size>
+    <DateTime>2018/6/19 23:20:20</DateTime>
+    <BenchmarkVersion>1.6.4237.30508</BenchmarkVersion>
+    <Mode>MB/s</Mode>
+    <Note />
+    <Signature />
+  </Information>
+  <SeqTest>
+    <Read>490.47 MB/s</Read>
+    <Write>452.20 MB/s</Write>
+  </SeqTest>
+  <Random4K1TTest>
+    <Read>14.20 MB/s</Read>
+    <Write>46.47 MB/s</Write>
+  </Random4K1TTest>
+  <Random4K64TTest>
+    <Read>354.39 MB/s</Read>
+    <Write>147.67 MB/s</Write>
+  </Random4K64TTest>
+  <AccTimeTest>
+    <Read>0.209 ms</Read>
+    <Write>0.073 ms</Write>
+  </AccTimeTest>
+  <Score>
+    <Read>418</Read>
+    <Write>239</Write>
+    <Total>871</Total>
+  </Score>
+</ASSSDBenchmark>

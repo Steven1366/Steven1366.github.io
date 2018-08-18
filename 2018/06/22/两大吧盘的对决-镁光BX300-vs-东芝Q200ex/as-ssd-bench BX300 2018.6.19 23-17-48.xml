@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ASSSDBenchmark
+  XmlFormatVersion="1">
+  <Information>
+    <Name>HGST HDN726040ALE614</Name>
+    <Firmware>M2CR010</Firmware>
+    <Controller>storahci</Controller>
+    <Size>223.57 GB</Size>
+    <DateTime>2018/6/19 23:17:48</DateTime>
+    <BenchmarkVersion>1.6.4237.30508</BenchmarkVersion>
+    <Mode>MB/s</Mode>
+    <Note />
+    <Signature />
+  </Information>
+  <SeqTest>
+    <Read>511.65 MB/s</Read>
+    <Write>478.33 MB/s</Write>
+  </SeqTest>
+  <Random4K1TTest>
+    <Read>19.46 MB/s</Read>
+    <Write>83.05 MB/s</Write>
+  </Random4K1TTest>
+  <Random4K64TTest>
+    <Read>317.24 MB/s</Read>
+    <Write>333.61 MB/s</Write>
+  </Random4K64TTest>
+  <AccTimeTest>
+    <Read>0.075 ms</Read>
+    <Write>0.071 ms</Write>
+  </AccTimeTest>
+  <Score>
+    <Read>388</Read>
+    <Write>464</Write>
+    <Total>1054</Total>
+  </Score>
+</ASSSDBenchmark>
