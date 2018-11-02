@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[记一次B747-400短途飞行，下地岛-香港]]></title>
-    <url>%2F2018%2F06%2F05%2F%E8%AE%B0%E4%B8%80%E6%AC%A1B747-400%E7%9F%AD%E9%80%94%E9%A3%9E%E8%A1%8C%EF%BC%8C%E4%B8%8B%E5%9C%B0%E5%B2%9B-%E9%A6%99%E6%B8%AF%2F</url>
-    <content type="text"><![CDATA[本文暂缓施工]]></content>
+    <title><![CDATA[良心还是坑爹？镁光BX500开箱+简测]]></title>
+    <url>%2F2018%2F10%2F27%2F%E8%89%AF%E5%BF%83%E8%BF%98%E6%98%AF%E5%9D%91%E7%88%B9%EF%BC%9F%E9%95%81%E5%85%89BX500%E5%BC%80%E7%AE%B1-%E7%AE%80%E6%B5%8B%2F</url>
+    <content type="text"><![CDATA[前言 今年SSD价格随着3Dnand产能的上升，一路暴跌，就拿我之前买的Q200举例，5月时是580块，到现在400整就可以入手，7月700搞到的东芝TR200，现在550足矣（要是内存可以这样降价就好了） 开箱 包装基本上就是一个简单的纸盒，这没啥好说的，不过相较于上一代的BX300，未免显得寒酸了一点 BX300里除了硬盘本体，还有一张说明书，还有一个数据迁移软件的序列号和一个笔记本用的垫片，上面附带有双面胶 反观BX500，只有一个塑料卡扣盒，一张说明书，盒子特别难拆，至少很容易伤到，硬盘外壳也成了磨砂塑料+卡扣式设计，而非BX300的金属磨砂外壳+螺丝，手感也明显差了不少 再看看同样定位的东芝TR200的盘体做工，虽然是卡扣设计但外壳仍然是金属的，还是非常好拆解的 上机这里再说点废话，原本刚放十一那会系统突然死机，断电后就无法再次启动，但运气还不错，up主个人先是那之前就已经做好系统的TR200开了机，成功的转移出镁光BX300里1的数据，然后就在今天抱着试试的心态突然发现Q200ex也奇迹般的复活了（可能是跟FLT重建有关）总之盘还是好的数据没丢就太好了，硬盘有价数据无价 基准测试在格式化硬盘之前先跑一次HDtune的填盘测试 掉完速的写入速度相当的糟糕，仅仅75M每秒，这连一些5400rpm的HDD都不如，不过疑似高达120GB的SLC缓存还是很可怕的，日常使用基本超不出去 进行完填盘测试，第二个就是CDM的读写测试，虽然市场上不少SSD都对这种跑分软件有一定的优化，好跑出一个好看点的成绩，但该掉速的盘还是会掉速，这类软件的数据仍然有一定的参考价值 从1GB到32GB读写全部都没有大幅度掉速，至少可以证明这盘的SLC缓存还是不小的 由于前期进行了大量的基准测试，消耗了大量的SLC缓存，后续进行的45GB大文件夹拷贝测试也使得这块盘的SLC缓存终于见底了 由于无法确定之前的具体写入量与跑分和拷贝测试之间主控到底释放了多少GB的SLC缓存，所以上图的掉速点不作数，最后掉完速之后写入速度在85左右的区间浮动，偶尔可以调到140，主控的SLC策略大致是是边擦边写，类似东芝Q200的SLC缓存机制 将这盘静置了几个小时之后我又进行了一次60GB的拷贝测试，复制全程没有掉速，算是意料之外情理之中吧，但同时主控也来到了65摄氏度，要知道镁光BX500采用的是和BX300上搭载的2258主控一脉相承的2258XT，很明显塑料外壳严重妨碍了主控的散热 如果让此盘进行连续不断的测试跑分，主控甚至可以到达78摄氏度，这已经赶得上不少NVME盘的温度了，很明显，单单从温度上讲这款硬盘并不适合长时间高负载的写入 Anival Bench Mark，成绩和之前一些软件测试的结果差不多，反正都是在SLC缓存里跑的 AS-SSD 10GB写入测试，也是中规中矩的表现 其他的一些看法（部分内容基于PCEVA中部分关于BX500的评测） 很显然这块SSD是用于冲击低价位-大容量-低性能这一级别的市场，近乎1元1GB的价格确实非常具有吸引力，这块盘根据网络上可以查找到的消息，原定很可能是采用3D QLC颗粒而非现在的3D TLC，但很可能由于良率问题暂时使用3D TLC，后续随着良率的上升很可能会替换成3D QLC颗粒，就像当年的闪迪加强版从MLC偷偷换成了TLC，东芝Q200ex换成了15纳米MLC 120GB的SLC缓存也很像是在使用全盘SLC方案，但在这个容量的TLC盘上，全盘模拟SLC时SLC缓存的容量应该是160GB左右而非120GB，但如果是QLC的盘那就说得通了，就像东芝Q200填充不超过120GB就是全盘SLC，超过了掉速350 如此之大的SLC缓存带来的第二个问题就是寿命问题，SLC缓存本身就是只写入颗粒的第一个bit，待超载或者读写结束后再慢慢整理，这样就会带来额外的擦写操作，写入放大率想必不会小，如果换成QLC颗粒那情况就很像我目前在用的东芝Q200ex，加上QLC本身较低的寿命，如果BX500这的换成了QLC，那这样这盘仅仅适合作为一个仓库盘使用，其实即便现在TLC的120G缓存也是这种情况，毕竟巨大的主控发热，和无DRAM缓存设计摆在那里]]></content>
+      <categories>
+        <category>硬件</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[东芝Q200ex掉速之谜]]></title>
@@ -27,14 +30,14 @@
     <content type="text"><![CDATA[这篇文章是在个人台式机的新系统上所编辑的]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
-    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F05%2F12%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2018%2F05%2F12%2Fcate%2F</url>
+    <content type="text"><![CDATA[title: catedate: 2018-05-02 17:45:04tags:categories:测试—测试http://localhost:4000/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more https://steven1366.github.io/2018/05/01/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/#more]]></content>
   </entry>
   <entry>
     <title><![CDATA[关于近期B站转码机制]]></title>
